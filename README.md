@@ -1,98 +1,89 @@
-<div align="center">
+# 🚀 InterviewCollab
 
-  <h1>🚀 CodeNPrep</h1>
-  
-  <p>
-    <strong>Real-time Collaborative Interview Preparation Platform</strong>
-  </p>
+### Real-Time Collaborative Technical Interview Platform
 
-  <p>
-    <a href="https://codenprep-1.onrender.com"><strong>Live Demo</strong></a>
-
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb" alt="React" />
-    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-    <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  </p>
-
-</div>
+[![React](https://img.shields.io/badge/React-2023?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
 ---
 
-## 📖 About
+## 📌 About
 
-**CodeNPrep** is a seamless, real-time collaborative coding environment designed to simulate technical interviews. It bridges the gap between preparation and execution by combining a powerful code editor, video conferencing, and instant messaging into a single, unified interface.
+**InterviewCollab** is a real-time collaborative platform designed to simulate technical interview environments.
 
-Built for developers, by developers. Practice algorithms, debug together, and ace your next technical interview.
+The platform brings together collaborative coding, video communication, and real-time messaging into a single workspace, allowing users to conduct technical interviews, solve coding problems together, and communicate during interview sessions.
+
+The project focuses on creating an environment where interviewers and candidates can interact through a shared coding workspace while communicating in real time.
+
+---
 
 ## ✨ Features
 
-- **💻 Collaborative Code Editor**: Powered by **Monaco Editor**, offering a VS Code-like experience with syntax highlighting for multiple languages.
-- **📹 Live Video & Audio**: Integrated **Stream SDK** for high-quality, low-latency video calls to simulate face-to-face interviews.
-- **💬 Real-time Chat**: Instant messaging for quick communication and sharing resources during sessions.
-- **🔐 Secure Authentication**: Robust user management and session handling verified by **Clerk**.
-- **🎨 Modern UI/UX**: A polished, responsive interface built with **TailwindCSS** and **DaisyUI**.
-- **⚡ Background Jobs**: Efficient handling of async tasks using **Inngest**.
+### 💻 Collaborative Code Editor
 
-## 🛠 Tech Stack
+- VS Code-like coding experience
+- Powered by Monaco Editor
+- Syntax highlighting
+- Support for multiple programming languages
+- Real-time collaborative coding
 
-### Frontend
-- **Framework**: React (Vite)
-- **Styling**: TailwindCSS, DaisyUI
-- **Editor**: Monaco Editor
+### 📹 Video & Audio Communication
 
-### Backend
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB (Mongoose)
+- Real-time video conferencing
+- Audio communication
+- Designed for interviewer-candidate interaction
+- Powered by Stream SDK
 
-### Services
-- **Auth**: Clerk
-- **Real-time Media**: Stream.io
-- **Deployment**: Render
+### 💬 Real-Time Chat
 
-## 🚀 Getting Started
+- Instant messaging
+- Communication during interview sessions
+- Useful for sharing resources and discussing problems
 
-### Prerequisites
-- Node.js (v18+)
-- MongoDB connection string
-- Clerk API Keys
-- Stream API Keys
+### 🔐 Authentication
 
-### Installation
+- Secure user authentication
+- Session management
+- Authentication powered by Clerk
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/overratedengineer/codenprep.git
-   cd codenprep
-   ```
+### 🎨 Modern User Interface
 
-2. **Setup Frontend**
-   ```bash
-   cd frontend
-   npm install
-   # Create .env file with VITE_CLERK_PUBLISHABLE_KEY, etc.
-   npm run dev
-   ```
+- Responsive interface
+- TailwindCSS
+- DaisyUI
+- Modern component-based React architecture
 
-3. **Setup Backend**
-   ```bash
-   cd backend
-   npm install
-   # Create .env file with PORT, MONGODB_URI, CLERK_SECRET_KEY, etc.
-   npm run dev
-   ```
+### ⚡ Background Processing
 
-## 🤝 Contributing
+- Asynchronous background tasks
+- Event-driven workflows
+- Powered by Inngest
 
-Contributions are welcome! Please verify your changes and open a pull request.
+---
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+# 🏗️ System Architecture
+
+The application follows a client-server architecture consisting of:
+
+```text
+                ┌─────────────────────┐
+                │      Frontend       │
+                │   React + Vite      │
+                └──────────┬──────────┘
+                           │
+                           │ HTTP / API
+                           ▼
+                ┌─────────────────────┐
+                │       Backend       │
+                │ Node.js + Express   │
+                └──────────┬──────────┘
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+        ┌─────────┐   ┌──────────┐  ┌──────────┐
+        │ MongoDB │   │  Clerk   │  │ Stream   │
+        │ Database│   │   Auth   │  │   SDK    │
+        └─────────┘   └──────────┘  └──────────┘
